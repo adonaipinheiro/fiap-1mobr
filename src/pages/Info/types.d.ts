@@ -6,3 +6,10 @@ export interface GithubUser {
   public_repos: number;
   bio: string;
 }
+
+export interface GithubUserRepos {
+  name: string;
+  language: string;
+  html_url: string;
+  id: number;
+}

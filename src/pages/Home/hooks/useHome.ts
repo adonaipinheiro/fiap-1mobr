@@ -29,31 +29,6 @@ export default function useHome() {
         },
       });
     }
-
-    // else {
-    //   fetch(`https://api.github.com/users/${input}`)
-    //     .then((r) => r.json())
-    //     .then((r: GithubResponse) => {
-    //       console.log(r);
-    //       setName(r.name);
-    //       setUserUrl(r.html_url);
-    //       toast.success(
-    //         "Maravilha! Conseguimos achar o usuário do Github!",
-    //         {
-    //           position: toast.POSITION.TOP_RIGHT,
-    //         }
-    //       );
-    //     })
-    //     .catch(() => {
-    //       console.log("Deu erro");
-    //       toast.error(
-    //         "Opa! Algo não deu certo... Tente novamente!",
-    //         {
-    //           position: toast.POSITION.TOP_RIGHT,
-    //         }
-    //       );
-    //     });
-    // }
   }
 
   return {
