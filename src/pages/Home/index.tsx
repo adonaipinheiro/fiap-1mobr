@@ -1,29 +1,26 @@
-import useHome from "./useHome";
+// Hooks
+import useHome from "./hooks/useHome";
+
+// Styles
+import { Container, Content } from "./styles";
 
 function Home() {
-  const {
-    name,
-    input,
-    handleInputChange,
-    fetchGithubApi,
-    userUrl,
-  } = useHome();
+  const { input, handleInputChange, goToUserInfo } =
+    useHome();
 
   return (
-    <div className="Container">
+    <Container>
       <h1>FIAP</h1>
       <h2>Educação que transforma!</h2>
-      <h3>Bem-vindo, {name}</h3>
-      <div className="Content">
+      <Content>
         <input
           value={input}
           onChange={handleInputChange}
           placeholder="Digite seu usuário"
         />
-        <button onClick={fetchGithubApi}>Buscar</button>
-      </div>
-      <a href={userUrl}>{userUrl}</a>
-    </div>
+        <button onClick={goToUserInfo}>Buscar</button>
+      </Content>
+    </Container>
   );
 }
 
