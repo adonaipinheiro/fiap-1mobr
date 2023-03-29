@@ -1,4 +1,4 @@
-export interface GithubUser {
+interface GithubUser {
   name: string;
   login: string;
   html_url: string;
@@ -7,7 +7,7 @@ export interface GithubUser {
   bio: string;
 }
 
-export interface GithubUserRepos {
+interface GithubUserRepos {
   name: string;
   language: string;
   html_url: string;

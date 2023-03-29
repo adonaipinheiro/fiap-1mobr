@@ -8,18 +8,6 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  h3 {
-    font-size: 1.125rem;
-  }
-
   a {
     color: var(--white);
     margin-top: 1rem;
@@ -40,15 +28,6 @@ const Content = styled.div`
 
   span {
     font-size: 3rem;
-  }
-
-  input {
-    padding: 0.5rem;
-    border-color: #0005;
-    border-radius: 0.25rem;
-    border-width: 1px;
-    width: 100%;
-    height: 40px;
   }
 
   button {

@@ -6,11 +6,21 @@ import {
 } from "react-router-dom";
 
 // Pages
-import { Home, Info, NotFound } from "../pages";
+import {
+  Home,
+  Info,
+  Loading,
+  NotFound,
+  SignIn,
+  SignUp,
+} from "../pages";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
-    <Route path="/" element={<Home />} />,
+    <Route path="/" element={<Loading />} />,
+    <Route path="/home" element={<Home />} />,
+    <Route path="/signIn" element={<SignIn />} />,
+    <Route path="/signUp" element={<SignUp />} />,
     <Route path="/info" element={<Info />} />,
     <Route path="*" element={<NotFound />} />,
   ])

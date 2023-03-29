@@ -1,4 +1,5 @@
 // Hooks
+import { Input } from "../../components";
 import useHome from "./hooks/useHome";
 
 // Styles
@@ -13,7 +14,7 @@ function Home() {
       <h1>FIAP</h1>
       <h2>Educação que transforma!</h2>
       <Content>
-        <input
+        <Input
           value={input}
           onChange={handleInputChange}
           placeholder="Digite seu usuário"
