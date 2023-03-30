@@ -5,6 +5,10 @@ export function Input({ error, ...props }: InputProps) {
     <Container>
       <input {...props} />
       {error && <span>* {error}</span>}
+
+      {/* {true || false}
+      {true && false}
+      {true ? true : false} */}
     </Container>
   );
 }

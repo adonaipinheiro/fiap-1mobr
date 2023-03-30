@@ -17,6 +17,9 @@ export const Container = styled.div<ButtonStylesProps>`
     color: var(--white);
     font-weight: bold;
 
+    cursor: ${(props) =>
+      props.loading ? "wait" : "pointer"};
+
     border-radius: 4px;
     border: 0;
 
