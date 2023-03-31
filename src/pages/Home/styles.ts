@@ -7,10 +7,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 
   a {
     color: var(--white);
     margin-top: 1rem;
+  }
+
+  strong {
+    margin-top: 1rem;
+    cursor: pointer;
   }
 `;
 

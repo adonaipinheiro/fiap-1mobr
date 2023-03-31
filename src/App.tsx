@@ -1,3 +1,5 @@
+import { Provider } from "react-redux";
+
 // Toast
 import { ToastContainer } from "react-toastify";
 
@@ -7,13 +9,16 @@ import { GlobalStyles } from "./styles/globalStyles";
 // Router
 import { Router } from "./routes";
 
+// Store
+import { store } from "./store";
+
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <GlobalStyles />
       <ToastContainer />
       <Router />
-    </>
+    </Provider>
   );
 }
 

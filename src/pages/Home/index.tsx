@@ -6,13 +6,19 @@ import useHome from "./hooks/useHome";
 import { Container, Content } from "./styles";
 
 function Home() {
-  const { input, handleInputChange, goToUserInfo } =
-    useHome();
+  const {
+    input,
+    handleInputChange,
+    goToUserInfo,
+    handleLogOut,
+    userName,
+  } = useHome();
 
   return (
     <Container>
       <h1>FIAP</h1>
       <h2>Educação que transforma!</h2>
+      <h3>Seja bem-vindo, {userName}</h3>
       <Content>
         <Input
           value={input}
@@ -21,6 +27,7 @@ function Home() {
         />
         <button onClick={goToUserInfo}>Buscar</button>
       </Content>
+      <strong onClick={handleLogOut}>Sair</strong>
     </Container>
   );
 }

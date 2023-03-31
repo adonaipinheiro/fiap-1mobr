@@ -2,8 +2,22 @@ import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+// Redux
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../../store/hooks";
+
+// Actions
+import { removeUser } from "../../../store/user/userSlice";
+import { removeToken } from "../../../store/auth/authSlice";
+
 export default function useHome() {
   const [input, setInput] = useState<string>("");
+  const userName = useAppSelector(
+    (state) => state.user.name
+  );
+  const dispatch = useAppDispatch();
 
   const navigate = useNavigate();
 
@@ -11,6 +25,15 @@ export default function useHome() {
     event: ChangeEvent<HTMLInputElement>
   ) {
     setInput(event.target.value);
+  }
+
+  function handleLogOut() {
+    dispatch(removeToken());
+    dispatch(removeUser());
+
+    navigate("/signin", {
+      replace: true,
+    });
   }
 
   function goToUserInfo() {
@@ -36,5 +59,7 @@ export default function useHome() {
     setInput,
     handleInputChange,
     goToUserInfo,
+    handleLogOut,
+    userName,
   };
 }
