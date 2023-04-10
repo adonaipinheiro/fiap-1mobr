@@ -8,7 +8,7 @@ export function Loading() {
 
   useEffect(() => {
     if (true) {
-      navigate("/home", { replace: true });
+      navigate("/home");
     } else {
       navigate("signIn");
     }
