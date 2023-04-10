@@ -7,7 +7,7 @@ export function Loading() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (true) {
+    if (false) {
       navigate("/home");
     } else {
       navigate("signIn");
