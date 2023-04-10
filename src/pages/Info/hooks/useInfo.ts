@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 
+// Types
+import { GithubUser, GithubUserRepos } from "../types";
+
 export default function useInfo() {
   const [user, setUser] = useState<GithubUser>();
   const [repos, setRepos] = useState<GithubUserRepos[]>([]);
