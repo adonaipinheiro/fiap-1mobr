@@ -39,7 +39,7 @@ export function useSignIn() {
           email: values.email,
         })
       );
-      navigate("/home");
+      navigate("/");
       setSubmitting(false);
     }, 2000);
   }

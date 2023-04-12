@@ -19,13 +19,13 @@ function Home() {
       <h1>FIAP</h1>
       <h2>Educação que transforma!</h2>
       <h3>Seja bem-vindo, {userName}</h3>
-      <Content>
+      <Content onSubmit={goToUserInfo}>
         <Input
           value={input}
           onChange={handleInputChange}
           placeholder="Digite seu usuário"
         />
-        <button onClick={goToUserInfo}>Buscar</button>
+        <button type="submit">Buscar</button>
       </Content>
       <strong onClick={handleLogOut}>Sair</strong>
     </Container>

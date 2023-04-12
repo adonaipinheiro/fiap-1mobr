@@ -13,9 +13,13 @@ import {
 } from "./styles";
 
 function Info() {
-  const { user, repos } = useInfo();
+  const { user, repos, loading } = useInfo();
 
-  if (!user) {
+  if (loading) {
+    return <div>Carregando</div>;
+  }
+
+  if (!user || !repos) {
     return <div>Não tem usuário</div>;
   }
 

@@ -20,7 +20,7 @@ const Container = styled.div`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
