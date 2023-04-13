@@ -16,7 +16,7 @@ export default defineConfig({
         name: "FIAP",
         short_name: "FIAP",
         description: "Educação que transforma",
-        theme_color: "#ffffff",
+        theme_color: "#ba1247",
         icons: [
           {
             src: "fiap_192.png",
