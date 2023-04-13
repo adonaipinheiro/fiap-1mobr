@@ -16,7 +16,11 @@ function Info() {
   const { user, repos, loading } = useInfo();
 
   if (loading) {
-    return <div>Carregando</div>;
+    return (
+      <div>
+        <h1>Carregando</h1>
+      </div>
+    );
   }
 
   if (!user || !repos) {

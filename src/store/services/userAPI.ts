@@ -31,4 +31,5 @@ export const userAPI = createApi({
 export const {
   useLazyGetUserInfoQuery,
   useLazyGetUserReposQuery,
+  useGetUserInfoQuery,
 } = userAPI;
